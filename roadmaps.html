@@ -12,7 +12,37 @@
       background-color: #f4f6f9;
       font-family: Arial, sans-serif;
     }
+    .company-section {
+  margin-top: 60px;
+  margin-bottom: 80px; /* 👈 THIS FIXES YOUR ISSUE */
+}
+.company-section {
+  margin-top: 60px;
+}
 
+.company-card {
+  border: none;
+  border-radius: 15px;
+  padding: 20px;
+  transition: 0.3s;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  background: white;
+}
+
+.company-card:hover {
+  transform: translateY(-8px);
+}
+
+.company-card img {
+  height: 70px;
+  object-fit: contain;
+  transition: 0.3s;
+}
+
+/* Optional hover effect (slight zoom only, no grayscale) */
+.company-card:hover img {
+  transform: scale(1.08);
+}
     .hero {
       background-color: #0d2b45;
       color: white;
@@ -135,14 +165,37 @@
 
 </div>
 <!-- 🔹 COMPANY LOGOS -->
-<div class="container text-center mt-5">
-  <h3 class="section-title">Top Hiring Companies</h3>
+<!-- 🔹 COMPANY LOGOS -->
+<!-- 🔹 TOP COMPANIES -->
+<div class="container company-section">
+  <h3 class="section-title text-center">Top Hiring Companies</h3>
 
-  <div class="company-logo">
-    <img src="https://logo.clearbit.com/google.com">
-    <img src="https://logo.clearbit.com/amazon.com">
-    <img src="https://logo.clearbit.com/microsoft.com">
-    <img src="https://logo.clearbit.com/netflix.com">
+  <div class="row g-4 text-center">
+
+    <div class="col-md-3 col-6">
+      <div class="company-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg">
+      </div>
+    </div>
+
+    <div class="col-md-3 col-6">
+      <div class="company-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg">
+      </div>
+    </div>
+
+    <div class="col-md-3 col-6">
+      <div class="company-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg">
+      </div>
+    </div>
+
+    <div class="col-md-3 col-6">
+      <div class="company-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg">
+      </div>
+    </div>
+
   </div>
 </div>
 <footer style="background:#0b2545; color:white; padding:40px 60px;">
