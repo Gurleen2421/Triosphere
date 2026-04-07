@@ -12,6 +12,38 @@
       background-color: #f4f6f9;
       font-family: Arial, sans-serif;
     }
+        .company-section {
+  margin-top: 60px;
+}
+
+.company-card {
+  border: none;
+  border-radius: 15px;
+  padding: 20px;
+  transition: 0.3s;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  background: white;
+}
+
+.company-card:hover {
+  transform: translateY(-8px);
+}
+
+.company-card img {
+  height: 70px;
+  object-fit: contain;
+  transition: 0.3s;
+}
+
+/* Optional hover effect (slight zoom only, no grayscale) */
+.company-card:hover img {
+  transform: scale(1.08);
+}
+.company-section {
+  margin-top: 60px;
+  margin-bottom: 80px; /* 👈 THIS FIXES YOUR ISSUE */
+}
+    
 
     .hero {
       background-color: #0d2b45;
@@ -127,7 +159,11 @@
           <li>React Development</li>
           <li>Full Stack Bootcamp</li>
         </ul>
-        <button class="btn btn-primary">Explore Courses</button>
+
+        <a href="https://www.freecodecamp.org/learn/" target="_blank">
+          <button class="btn btn-primary">Explore Courses</button>
+        </a>
+
       </div>
     </div>
 
@@ -140,11 +176,15 @@
           <li>Backend Intern</li>
           <li>Full Stack Intern</li>
         </ul>
-        <button class="btn btn-success">View Internships</button>
+
+        <a href="https://internshala.com/internships/web-development-internship" target="_blank">
+          <button class="btn btn-success">View Internships</button>
+        </a>
+
       </div>
     </div>
 
-    <!-- COMPANIES -->
+    <!-- COMPANIES / JOBS -->
     <div class="col-md-4">
       <div class="card p-3">
         <h5>Placement Companies</h5>
@@ -153,24 +193,45 @@
           <li>Amazon</li>
           <li>Microsoft</li>
         </ul>
-        <button class="btn btn-danger">View Companies</button>
+
+        <a href="https://www.linkedin.com/jobs/web-developer-jobs/" target="_blank">
+          <button class="btn btn-danger">View Companies</button>
+        </a>
+
       </div>
     </div>
 
   </div>
 </div>
 
-<!-- 🔹 COMPANY LOGOS -->
-<div class="container text-center mt-5">
-  <h3 class="section-title">Top Hiring Companies</h3>
+<div class="container company-section">
+  <h3 class="section-title text-center">Top Hiring Companies</h3>
 
-  <div class="company-logo">
-    <img src="https://logo.clearbit.com/google.com">
-    <img src="https://logo.clearbit.com/amazon.com">
-    <img src="https://logo.clearbit.com/microsoft.com">
-    <img src="https://logo.clearbit.com/netflix.com">
-  </div>
-</div>
+  <div class="row g-4 text-center">
+
+    <div class="col-md-3 col-6">
+      <div class="company-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg">
+      </div>
+    </div>
+
+    <div class="col-md-3 col-6">
+      <div class="company-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg">
+      </div>
+    </div>
+
+    <div class="col-md-3 col-6">
+      <div class="company-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg">
+      </div>
+    </div>
+
+    <div class="col-md-3 col-6">
+      <div class="company-card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg">
+      </div>
+    </div>
 <footer style="background:#0b2545; color:white; padding:40px 60px;">
 
     <div style="display:flex; flex-wrap:wrap; justify-content:space-between; max-width:1100px; margin:auto;">
